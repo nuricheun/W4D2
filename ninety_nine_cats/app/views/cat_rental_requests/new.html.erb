@@ -1,0 +1,11 @@
+<form action="<%= cat_rental_requests_url %>" method="post">
+<label> Select a Cat:
+    <select name="cat_rental_request[cat]">
+        <option disabled <%= @cat_rental_request.cat_id ? "" : "selected" %>>Please select a Cat</option>
+        <% @cats.each do |cat| %>
+          <option value="<%= cat.id %>"><%= cat.name %></option>
+        <% end %>
+    </select>
+    <input type="date">
+  </label>
+</form>
